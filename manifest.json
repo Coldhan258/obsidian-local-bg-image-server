@@ -3,7 +3,7 @@
   "name": "Local Background Image Server",
   "version": "1.0.0",
   "minAppVersion": "0.15.0",
-  "description": "本地背景图片服务器 — 将本地文件夹映射为 HTTP 服务，解决 Obsidian 壁纸仅支持线上 URL 的问题",
-  "author": "",
+  "description": "Local Background Image Server – Map Local Folders to HTTP Services to Fix Obsidian’s Limitation of Only Accepting Online URLs for Wallpapers",
+  "author": "Coldhan258",
   "isDesktopOnly": true
 }
