@@ -1,7 +1,7 @@
 {
   "id": "local-bg-image-server",
   "name": "Local Background Image Server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minAppVersion": "0.15.0",
   "description": "Map local folders to HTTP services to fix the limitation of only accepting online URLs for wallpapers.",
   "author": "Coldhan258",
