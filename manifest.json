@@ -3,7 +3,7 @@
   "name": "Local Background Image Server",
   "version": "1.0.0",
   "minAppVersion": "0.15.0",
-  "description": "Local Background Image Server – Map Local Folders to HTTP Services to Fix Obsidian’s Limitation of Only Accepting Online URLs for Wallpapers",
+  "description": "Map local folders to HTTP services to fix the limitation of only accepting online URLs for wallpapers.",
   "author": "Coldhan258",
   "isDesktopOnly": true
 }
