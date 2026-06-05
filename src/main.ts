@@ -41,7 +41,7 @@ export default class BGServerPlugin extends Plugin {
   // ── configuration ──────────────────────────────────────────
 
   async loadConfig(): Promise<void> {
-    const data = await this.loadData();
+    const data: Partial<BGServerConfig> = await this.loadData();
     this.config = Object.assign({}, DEFAULT_CONFIG, data || {});
   }
 
