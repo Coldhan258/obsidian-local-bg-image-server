@@ -53,8 +53,9 @@ export default class BGServerPlugin extends Plugin {
 
   /** Resolve the configured image folder to an absolute path. */
   getImageFolderPath(): string {
-    const adapter = this.app.vault.adapter as { getBasePath?: () => string };
-    const vaultPath = adapter.getBasePath?.();
+    const adapter = this.app.vault.adapter as unknown as Record<string, unknown>;
+    const vaultPath = typeof adapter.getBasePath === 'function'
+      ? (adapter.getBasePath as () => string)() : undefined;
 
     if (!vaultPath) {
       return path.resolve(this.config.imageFolderPath);
@@ -93,7 +94,6 @@ export default class BGServerPlugin extends Plugin {
         );
       }
     } catch (e) {
-      const msg = (e as Error).message;
       new Notice(this.t('main.portExhausted', { max: 10 }));
       throw e;
     }

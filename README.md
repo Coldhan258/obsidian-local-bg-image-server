@@ -112,28 +112,6 @@ http://localhost:8989/xxx.png
 
 ---
 
-## 开发 / Development
-
-```bash
-# 克隆仓库 / Clone the repo
-git clone https://github.com/你的用户名/obsidian-local-bg-image-server.git
-
-# 安装依赖 / Install dependencies
-cd obsidian-local-bg-image-server
-npm install
-
-# 开发模式（监听文件变更自动重构建）/ Dev mode (watch mode)
-npm run dev
-
-# 生产构建 / Production build
-npm run build
-```
-
-构建产物：`main.js` + `styles.css`，配合 `manifest.json` 一同安装。
-Build output: `main.js` + `styles.css`, to be installed together with `manifest.json`.
-
----
-
 ## 许可 / License
 
 MIT

@@ -38,7 +38,7 @@ export class BGServerSettingTab extends PluginSettingTab {
   // ── section: server status ─────────────────────────────────
 
   private buildStatusSection(containerEl: HTMLElement): void {
-    containerEl.createEl('h2', { text: this.t('status.title') });
+    new Setting(containerEl).setName(this.t('status.title')).setHeading();
 
     const server = this.plugin.server;
     const isRunning = server.isRunning;
@@ -105,7 +105,7 @@ export class BGServerSettingTab extends PluginSettingTab {
   // ── section: configuration ─────────────────────────────────
 
   private buildConfigSection(containerEl: HTMLElement): void {
-    containerEl.createEl('h2', { text: this.t('config.title') });
+    new Setting(containerEl).setName(this.t('config.title')).setHeading();
 
     // ── Language ──
     new Setting(containerEl)
@@ -209,7 +209,7 @@ export class BGServerSettingTab extends PluginSettingTab {
   // ── section: image preview ─────────────────────────────────
 
   private buildPreviewSection(containerEl: HTMLElement): void {
-    containerEl.createEl('h2', { text: this.t('preview.title') });
+    new Setting(containerEl).setName(this.t('preview.title')).setHeading();
 
     new Setting(containerEl)
       .setName(this.t('preview.refresh.name'))
@@ -313,10 +313,10 @@ export class BGServerSettingTab extends PluginSettingTab {
         img.alt = imgFile;
         img.loading = 'lazy';
         img.onerror = () => {
-          img.style.display = 'none';
+          img.classList.add('bg-thumbnail-hidden');
         };
       } else {
-        img.style.display = 'none';
+        img.classList.add('bg-thumbnail-hidden');
       }
 
       // Filename
@@ -395,7 +395,7 @@ export class BGServerSettingTab extends PluginSettingTab {
     btn.onclick = () => {
       navigator.clipboard.writeText(text).then(() => {
         new Notice(this.t('preview.copySuccess'));
-      });
+      }).catch(() => {});
     };
   }
 }

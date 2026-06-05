@@ -72,3 +72,7 @@
   padding: 2px 8px;
   cursor: pointer;
 }
+
+.bg-thumbnail-hidden {
+  display: none;
+}
