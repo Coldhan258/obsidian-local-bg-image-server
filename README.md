@@ -30,12 +30,12 @@ A desktop-only Obsidian plugin that solves the limitation of Obsidian's wallpape
 
 ## 安装 / Installation
 
-### 方法一 / Method 1: Community Marketplace（待上架 / Pending Review）
+### 方法一 / Method 1: Community Marketplace
 
 在 Obsidian 设置 → 社区插件 → 浏览中搜索 "Local Background Image Server"。
 Search "Local Background Image Server" in Obsidian Settings → Community Plugins → Browse.
 
-### 方法二 / Method 2: BRAT（审核期间尝鲜 / Early Access）
+### 方法二 / Method 2: BRAT
 
 1. 安装 [BRAT](https://github.com/TfTHacker/obsidian42-brat) 插件 / Install the BRAT plugin
 2. 运行命令 `BRAT: Add a beta plugin for testing`
